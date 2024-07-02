@@ -26,7 +26,7 @@ export default function Home() {
                 <span className="text-6xl font-black text-black inline-block mb-3 md:mb-0">
                   Hey!,
                 </span>
-                <span className="text-6xl font-black text-secondary"> I'm </span>
+                <span className="text-6xl font-black text-secondary"> {"I'm"} </span>
                 <span className="text-6xl font-black text-primary inline-block mb-3 md:mb-0">
                    Dhiraj
                 </span>

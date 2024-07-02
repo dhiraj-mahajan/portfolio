@@ -83,9 +83,9 @@ const Experience = ()=>{
 
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 ">
                 {
-                    orgDetails.map((item)=>{
+                    orgDetails.map((item, index)=>{
                         return (
-                            <div >
+                            <div key={index}>
                     <div className=" rounded-3xl shadow-lg">
                         <div className="p-4">
                         <div className="flex items-center justify-between">
@@ -118,9 +118,9 @@ const Experience = ()=>{
                                 {/* <h1 className="font-semibold ">Technologies</h1> */}
                                 <div className="lg:flex my-2 gap-4">
                                     {
-                                        item.technology.map((tech)=>{
+                                        item.technology.map((tech, ind)=>{
                                             return(
-                                                <div className="mb-3 lg:mb-0 flex items-center justify-center gap-2 w-full p-3 border-solid border-[1px] border-black rounded-2xl">
+                                                <div key={ind} className="mb-3 lg:mb-0 flex items-center justify-center gap-2 w-full p-3 border-solid border-[1px] border-black rounded-2xl">
                                     <Image alt="reactLogo" width={30} height={30} src={tech.logo}></Image>
                                     <p className="font-medium text-base">{tech.name}</p>
                                     </div>
