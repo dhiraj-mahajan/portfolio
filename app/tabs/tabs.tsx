@@ -17,7 +17,7 @@ export default function Tabs({ page }: Prop) {
   const deselect =
     "flex items-center justify-center m-3 h-12 w-12 bg-white rounded-2xl shadow-xl";
   const selected =
-    "flex items-center justify-center m-3 h-12 w-12 bg-gradient-to-b from-[#7755ff] to-[#559fff] rounded-2xl shadow-xl";
+    "flex items-center justify-center m-3 h-12 w-12 bg-gradient-to-bl from-[#a843eb] via-[#f43d40] to-[#ffa041] rounded-2xl shadow-xl";
 
   return (
     <div className="fixed bottom-0 right-0 left-0 p-6 flex justify-center">
@@ -25,7 +25,7 @@ export default function Tabs({ page }: Prop) {
         <Link href="/">
           <div className={page == "/" ? selected : deselect}>
             <FaHouse
-              className={page == "/" ? "text-[#ffffff]" : "text-primary"}
+              className={page == "/" ? "text-[#ffffff]" : "text-tertiory"}
               size={20}
             ></FaHouse>
           </div>
@@ -34,7 +34,7 @@ export default function Tabs({ page }: Prop) {
           <div className={page == "/experience" ? selected : deselect}>
             <FaBriefcase
               className={
-                page == "/experience" ? "text-[#ffffff]" : "text-primary"
+                page == "/experience" ? "text-[#ffffff]" : "text-tertiory"
               }
               size={20}
             ></FaBriefcase>
@@ -43,7 +43,7 @@ export default function Tabs({ page }: Prop) {
         <Link href="/about">
           <div className={page == "/about" ? selected : deselect}>
             <FaUser
-              className={page == "/about" ? "text-[#ffffff]" : "text-primary"}
+              className={page == "/about" ? "text-[#ffffff]" : "text-tertiory"}
               size={20}
             ></FaUser>
           </div>
@@ -53,7 +53,7 @@ export default function Tabs({ page }: Prop) {
           <div className={page == "/education" ? selected : deselect}>
             <FaGraduationCap
               className={
-                page == "/education" ? "text-[#ffffff]" : "text-primary"
+                page == "/education" ? "text-[#ffffff]" : "text-tertiory"
               }
               size={24}
             ></FaGraduationCap>
@@ -63,7 +63,7 @@ export default function Tabs({ page }: Prop) {
           <div className={page == "/portfolio" ? selected : deselect}>
             <FaFolderOpen
               className={
-                page == "/portfolio" ? "text-[#ffffff]" : "text-primary"
+                page == "/portfolio" ? "text-[#ffffff]" : "text-tertiory"
               }
               size={20}
             ></FaFolderOpen>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, Roboto_Flex } from "next/font/google";
 import "./globals.css";
 
 const dmSans = DM_Sans({ 
-  weight: ['200','300', '400', '700', '900', '1000'],
+  weight: ['200','300', '400', '500', '600', '700', '800', '900', '1000'],
   subsets: ["latin"] });
 
 export const metadata: Metadata = {

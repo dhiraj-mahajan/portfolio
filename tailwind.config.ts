@@ -9,8 +9,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#7755ff",
-        secondary: "#ffc448",
+        primary: "#a843eb",
+        secondary: "#f43d40",
+        tertiory: "#ffa041",
         black: "#292929"
       },
       backgroundImage: {
@@ -20,6 +21,9 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-dotted-background'),
+    //...
+  ],
 };
 export default config;
