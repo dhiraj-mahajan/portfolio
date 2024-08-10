@@ -13,7 +13,6 @@ type Prop = {
 };
 
 export default function Tabs({ page }: Prop) {
-  console.log(page);
   const deselect =
     "flex items-center justify-center m-3 h-12 w-12 bg-white rounded-2xl shadow-xl";
   const selected =

@@ -1,7 +1,10 @@
+'use client';
 import Image from "next/image";
 import Tabs from "./tabs/tabs";
 import { FaFile, FaLocationDot, FaPhone, FaEnvelope, FaArrowRight } from "react-icons/fa6";
+import { motion } from "framer-motion";
 export default function Home() {
+  let str1 = "Software Developer"
   return (
     <>
       <div className="flex justify-center bg-dotted-spacing-4 bg-dotted-[#bcbcbc] h-[100vh]">
@@ -21,7 +24,8 @@ export default function Home() {
             
           <div className="w-[100%] flex flex-col md:flex-row justify-center items-center mt-16 gap-8">
             {/* banner Image start */}
-            <div className="md:w-[50%] flex justify-center">
+            <motion.div className="md:w-[50%] flex justify-center" initial={{x:-100, opacity:0}} animate={{x:0, opacity:1}} transition={{ ease: "easeInOut", duration: 0.50 }}>
+              
             <div className="md:w-72 md:h-80 w-60 h-72 rounded-3xl border-[2px] border-[#565656] -rotate-3">
             <div className="md:w-72 md:h-80 w-60 h-72 bg-white shadow-lg rounded-3xl p-2 md:p-4 rotate-12 flex flex-col justify-between">
             <div className="w-[100%] flex justify-center bg-gradient-to-bl from-[#a843eb] via-[#f43d40] to-[#ffa041] pt-4 rounded-3xl">
@@ -42,24 +46,30 @@ export default function Home() {
             </div>
             </div>
             </div>
-            </div>
+            </motion.div>
             {/* banner Image end */}
 
             {/* Text intro part */}
-            <div className="md:w-[50%]">
+            <motion.div className="md:w-[50%]" initial={{x:100, opacity:0}} animate={{ x: 0, opacity: 1 }} transition={{ ease: "easeInOut", duration: 0.50 }}>
             <h1 className="md:text-6xl text-5xl font-black text-black drop-shadow-lg">
                   Hey!,
                 </h1>
                 <div className="mt-4">
-                <span className="md:text-7xl text-6xl drop-shadow-xl font-black bg-gradient-to-tr from-[#a843eb] via-[#f43d40] to-[#ffa041] inline-block text-transparent bg-clip-text"> {"I'm Dhiraj"} </span>
+                <span className="text-6xl drop-shadow-xl font-black bg-gradient-to-tr from-[#a843eb] via-[#f43d40] to-[#ffa041] inline-block text-transparent bg-clip-text"> {"I'm Dhiraj"} </span>
                 </div>
-              <p className="my-3 font-medium text-lg text-black">
-                a passionate Software Developer and UI/UX designer{" "}
+                <div className="mt-2 flex gap-2 items-baseline">
+              <p className="font-normal text-2xl text-black">
+                A Passionate{" "}
               </p>
-              <p className="my-3 font-medium text-lg text-black">
-                based in India{" "}
+              <motion.span initial="initial" animate="animate" className="relative block overflow-hidden whitespace-nowrap">
+              <motion.div variants={{initial : {y : 0}, animate : {y : -50, transition : {delay: 3, repeat: Infinity, duration: 1, repeatType: "mirror" } }}} className="font-black text-2xl text-black bg-gradient-to-tr from-[#a843eb] via-[#f43d40] to-[#ffa041] inline-block text-transparent bg-clip-text">Software Developer</motion.div>
+              <motion.div variants={{initial : {y : "100%"}, animate : {y : 0, transition : {delay: 3, repeat: Infinity, duration: 1, repeatType: "mirror"}} }} className="absolute inset-0 font-black text-2xl text-black bg-gradient-to-tr from-[#a843eb] via-[#f43d40] to-[#ffa041] inline-block text-transparent bg-clip-text">UI/UX designer</motion.div>
+              </motion.span>
+              </div>
+              <p className="my-1 font-normal text-2xl text-black">
+                based in Pune, India{" "}
               </p>
-              <div className="flex flex-col md:flex-row gap-2 md:gap-4">
+              <motion.div className="mt-5 flex flex-col md:flex-row gap-2 md:gap-4" initial={{y:100, opacity:0}} animate={{ y: 0, opacity: 1 }} transition={{ ease: "easeInOut", duration: 0.50, delay:0.50 }}>
               <button className="bg-gradient-to-tr from-[#a843eb] via-[#f43d40] to-[#ffa041] py-2 px-6 rounded-full mt-2">
                 <div className="flex justify-center gap-2 items-center py-2 ">
                   <FaFile className="text-white" size={15}></FaFile>
@@ -77,9 +87,9 @@ export default function Home() {
                   <FaArrowRight className="text-white" size={15}></FaArrowRight>
                 </div>
               </button>
-              </div>
+              </motion.div>
               
-            </div>
+            </motion.div>
               
             </div>
             
