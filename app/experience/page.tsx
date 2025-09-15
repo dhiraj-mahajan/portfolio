@@ -1,167 +1,185 @@
-import Tabs from "../tabs/tabs"
+import Tabs from "../tabs/tabs";
 import { FaLocationDot } from "react-icons/fa6";
-import Image from "next/image"
-const Experience = ()=>{
-    const orgDetails = [
+import Image from "next/image";
+const Experience = () => {
+  const orgDetails = [
+    {
+      orgName: "Amdocs India",
+      logo: "/DOX.png",
+      location: "Magarpatta, Pune",
+      designatio: "Software developer",
+      duration: "May-2022",
+      work: [
+        "Building scalable and interactive web applications using React TypeScript and JavaScript.",
+        "Collaborating with cross-functional teams to deliver high-performance solutions.",
+        "Focused on writing clean, maintainable code and optimizing UI for smooth user experiences.",
+      ],
+      working: true,
+      technology: [
         {
-            orgName: "Amdocs India",
-            logo: "/DOX.png",
-            location:"Magarpatta, Pune",
-            designatio:"Software developer",
-            duration: "May-2022",
-            working: true,
-            technology: [{
-                logo:"/react.png",
-                name:"React TS"
-            },
-            {
-                logo:"/js.png",
-                name:"JavaScript"
-            }]
+          logo: "/react.png",
+          name: "React TS",
         },
         {
-            orgName: "Bajaj Allianz",
-            logo: "/bajaj.png",
-            location:"Yerwada, Pune",
-            designatio:"Web Designer",
-            duration: "Jan-20 to Feb-22",
-            working: false,
-            technology: [{
-                logo:"/js.png",
-                name:"JavaScript"
-            },
-            {
-                logo:"/figma.png",
-                name:"Figma"
-            }]
+          logo: "/js.png",
+          name: "JavaScript",
+        },
+      ],
+    },
+    {
+      orgName: "Bajaj Allianz",
+      logo: "/bajaj.png",
+      location: "Yerwada, Pune",
+      designatio: "Web Designer",
+      duration: "Jan-20 to Feb-22",
+      work: [
+        "Designed and developed responsive websites with JavaScript for dynamic interactions.",
+        "Created intuitive UI layouts and prototypes using Figma.",
+        "Enhanced user experience by aligning design with business requirements.",
+      ],
+      working: false,
+      technology: [
+        {
+          logo: "/js.png",
+          name: "JavaScript",
         },
         {
-            orgName: "Autovista",
-            logo: "/autovista.png",
-            location:"Baner, Pune",
-            designatio:"Web Designer",
-            duration: "Jun-19 to Jan-20",
-            working: false,
-            technology: [{
-                logo:"/js.png",
-                name:"JavaScript"
-            },
-            {
-                logo:"/figma.png",
-                name:"Figma"
-            }]
+          logo: "/figma.png",
+          name: "Figma",
+        },
+      ],
+    },
+    {
+      orgName: "Autovista",
+      logo: "/autovista.png",
+      location: "Baner, Pune",
+      designatio: "Web Designer",
+      duration: "Jun-19 to Jan-20",
+      work: [
+        "Developed and maintained web pages for automotive business needs.",
+        "Designed Figma prototypes and implemented them with JavaScript.",
+        "Improved website aesthetics and usability to boost customer engagement.",
+      ],
+      working: false,
+      technology: [
+        {
+          logo: "/js.png",
+          name: "JavaScript",
         },
         {
-            orgName: "AffinityX",
-            logo: "/affinity.png",
-            location:"Kharadi, Pune",
-            designatio:"Graphic Designer",
-            duration: "Nov-18 to Jun-19",
-            working: false,
-            technology: [{
-                logo:"/ai.png",
-                name:"Illustrator"
-            },
-            {
-                logo:"/photoshop.png",
-                name:"Photoshop"
-            }]
-        }
-    ]
-    return(
-        <div className="flex justify-center bg-dotted-spacing-4 bg-dotted-[#bcbcbc] h-screen">
-            <div className="circlePosition w-96 h-80 bg-[#ffc478a3] rounded-full absolute z-[-1] top-[-5%] left-[-10%] blur-[95px]"></div>
-        <div className="circlePosition w-80 h-80 bg-[#ff9fda55] rounded-full absolute z-[-3] top-[2%] right-[15%] blur-3xl"></div>
-        <div className="circlePosition w-60 h-60 bg-[#7755ff5b] rounded-full absolute z-[-2] bottom-10 right-5 blur-[100px]"></div>
-        <div className="w-[80%]">
-        <Image
-            alt="logo"
-            width={100}
-            height={10}
-            src="/portfolioLogo.svg"
-            className="my-8"
-          ></Image>
-{/* Main Box */}
-
+          logo: "/figma.png",
+          name: "Figma",
+        },
+      ],
+    },
+    {
+      orgName: "AffinityX",
+      logo: "/affinity.png",
+      location: "Kharadi, Pune",
+      designatio: "Graphic Designer",
+      duration: "Nov-18 to Jun-19",
+      work: [
+        "Designed creative graphics, marketing materials, and brand assets using Illustrator & Photoshop.",
+        "Collaborated with clients to translate business ideas into impactful visuals.",
+        "Delivered high-quality digital and print-ready designs within tight deadlines.",
+      ],
+      working: false,
+      technology: [
         {
-            orgDetails.map((item, index)=>{
-                return (
-                    <div className="w-[100%] h-[60%] md:h-48 flex flex-col md:flex-row shadow-lg rounded-3xl mb-6">
-            {/* Organization logo box start  */}
-          <div className="md:w-[25%] h-[40%] md:h-auto bg-gradient-to-bl from-[#a843eb] via-[#f43d40] to-[#ffa041] md:rounded-s-3xl md:rounded-tr-none rounded-t-3xl flex justify-center items-center">
-            <div className="h-20 w-20 bg-white rounded-full flex justify-center items-center shadow-md" >
-                        <Image alt={item.logo} width={40} height={10} src={item.logo}></Image>
-                        </div>
-            </div>
-            {/* Organization logo box end  */}
-            {/* Organization details start  */}
-            <div className="md:w-[75%] h-[70%] md:h-auto p-4 md:pl-6 rounded-e-3xl bg-[#ffffff50] flex flex-col md:justify-between gap-2 relative ">
-                <div className="h-10 flex justify-center items-center px-5 rounded-bl-xl rounded-tr-xl bg-gradient-to-l from-[#a843eb] via-[#f43d40] to-[#ffa041] bottom-0 left-0 absolute  md:bottom-auto md:left-auto md:top-0 md:right-0">
-                <p className="text-base font-medium text-white">{item.duration}</p>
-                </div>
-                <div>
-                    <div className="flex md:flex-row flex-col-reverse md:gap-4 gap-2">
-                <h1 className="text-4xl font-black text-black bg-gradient-to-tr from-[#a843eb] via-[#f43d40] to-[#ffa041] inline-block text-transparent bg-clip-text">{item.orgName}</h1>
-                <div className="md:w-max w-full rounded-lg bg-[#ffd1fc8f] flex items-center md:px-4 md:py-0 py-2 px-2">
-                <div className="flex gap-2 items-center">
-                <FaLocationDot size={12}></FaLocationDot>
-                <p className="text-sm font-medium text-black">{item.location}</p>
-                </div>
-                </div>
-                </div>
-                <h3 className="text-2xl font-extrabold ">{item.designatio}</h3>
-                </div>
-                <div className="border-solid border-b-[1px] border-gray-400 md:w-[50%]"></div>
-                
-                <div className="flex gap-4 items-center">
-                    {item.technology.map((tech, ind)=>{
-                        return(
-
-                            <div className="flex items-center mt-2 ">
-                    <div className="w-7 h-7 bg-slate-200 rounded-s-md flex justify-center">
-                                    <Image alt={tech.logo} width={20} height={30} src={tech.logo} className="object-cover w-full h-full"></Image>
-                                    </div>
-                                    <div className="bg-black px-3 h-7 rounded-e-lg">
-                                    <p className="font-medium text-base text-white">{tech.name}</p>
-                                    </div>
-                                    </div>
-                        )
-
-                    })}
-                                    </div>
-            </div>
-            {/* Organization details end  */} 
+          logo: "/ai.png",
+          name: "Illustrator",
+        },
+        {
+          logo: "/photoshop.png",
+          name: "Photoshop",
+        },
+      ],
+    },
+  ];
+  return (
+    <div className="m-16">
+        <p className="text-8xl font-bold text-primary pb-4">
+      Organizations
+      </p>
+      <p className="text-8xl font-bold text-tertiory pb-4">
+      I’ve Worked With
+      </p>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+      {orgDetails.map((item, index) => (
+        <div
+          key={index}
+          className="border border-gray-300 rounded-3xl p-6 shadow-sm"
+        >
+          {/* Organization logo box start  */}
+          <div className="w-96 h-20 flex items-center mb-2">
+            <Image
+              className=""
+              alt={item.logo}
+              width={60}
+              height={40}
+              src={item.logo}
+            />
           </div>
-                )
-            })
-        }
-        <Tabs page="/experience"></Tabs>
+          {/* Organization logo box end  */}
+          <div>
+            <div className="flex gap-2 items-center">
+              <div className="h-12 w-2 bg-tertiory"></div>
+              <div>
+                <h3 className="text-xl font-bold text-tertiory mb-1">
+                  {item.orgName}
+                </h3>
+                <div className="flex gap-1">
+                  <h3 className="text-sm font-medium text-tertiory">
+                    {item.designatio}
+                  </h3>
+                  <div className="border-solid border-l-[1.5px] border-gray-400 h-4 mx-2"></div>
+                  <h3 className="text-sm font-medium text-tertiory">
+                    {item.duration}
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex m-4">
+              {/* Bullet points */}
+              <ul className="mt-2">
+                {item.work.map((point, idx) => (
+                  <li key={idx} className="flex items-start mb-3">
+                    {/* Custom icon instead of bullet */}
+                    <Image
+                      src="/bulletPoint.png"
+                      alt="bullet"
+                      width={16}
+                      height={16}
+                      className="mr-2 mt-1"
+                    />
+                    <span className="text-sm text-tertiory">{point}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="flex gap-4 items-center ml-5 mb-4">
+              {item.technology.map((tech, ind) => (
+                <div key={ind}>
+                  <div className="w-7 h-7 flex justify-center my-4">
+                    <Image
+                      alt={tech.logo}
+                      width={30}
+                      height={30}
+                      src={tech.logo}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        </div>
-    )
-}
+      ))}
+    </div>
+    </div>
+  );
+};
 
-export default Experience
-
-
-
-
-
-
-
-
-
-
-
-    
-    // <div className="h-[30%] p-4 flex gap-4">
-    //                     <div>
-    //                     <h4 className="text-black text-sm">Designation:</h4>
-    //                     <p className="text-black text-base font-semibold">Software developer</p>
-    //                     </div>
-    //                     <div className="border-r-[2px]"></div>
-    //                     <div>
-    //                     <h4 className="text-black text-sm">Since:</h4>
-    //                     <p className="text-black text-base font-semibold">2.2 Years</p>
-    //                     </div>
-    //                 </div> 
+export default Experience;
