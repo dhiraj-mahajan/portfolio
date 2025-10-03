@@ -5,6 +5,7 @@ import { FaFile, FaLocationDot, FaPhone, FaEnvelope, FaArrowRight } from "react-
 import { motion } from "framer-motion";
 import Experience from "./experience/page";
 import About from "./about/page";
+import Portfolio from "./portfolio/page";
 export default function Home() {
   let str1 = "Software Developer"
   return (
@@ -80,6 +81,9 @@ export default function Home() {
         </div>
         <div className="w-[90%]">
         <Experience></Experience>
+        </div>
+        <div className="w-[90%]">
+          <Portfolio />
         </div>
         <div className="w-full h-full bg-primary mt-6">
           <About></About>
