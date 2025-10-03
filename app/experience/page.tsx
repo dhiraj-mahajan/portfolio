@@ -97,18 +97,18 @@ const Experience = () => {
     },
   ];
   return (
-    <div className="m-16">
-        <p className="text-8xl font-bold text-primary pb-4">
+    <div className="md:m-16">
+        <p className="md:text-8xl text-4xl font-bold text-primary pb-4">
       Organizations
       </p>
-      <p className="text-8xl font-bold text-tertiory pb-4">
+      <p className="md:text-8xl text-4xl font-bold text-tertiory pb-4">
       I’ve Worked With
       </p>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
       {orgDetails.map((item, index) => (
         <div
           key={index}
-          className="border border-gray-300 rounded-3xl p-6 shadow-sm"
+          className="border border-gray-300 rounded-3xl md:p-6 p-4 shadow-sm"
         >
           {/* Organization logo box start  */}
           <div className="w-96 h-20 flex items-center mb-2">
